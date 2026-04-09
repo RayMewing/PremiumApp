@@ -1,3 +1,4 @@
+
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -690,7 +691,7 @@ function TabSettings() {
 
           <Section title="Cache API" icon="refresh">
             <p style={{ margin:'0 0 10px',fontSize:12,color:'#64748b' }}>Perbarui harga produk dari server API</p>
-            <div style={{ display:'flex',gap:8',flexWrap:'wrap' }}>
+            <div style={{ display:'flex',gap:8,flexWrap:'wrap' }}>
               {[['ppob','PPOB / Atlantic'],['prem','Akun Premium'],['nokos','Nokos'],['all','Semua Cache']].map(([t,l]) => (
                 <button key={t} onClick={() => refreshCache(t)} disabled={cacheRefreshing===t}
                   style={{ flex:1,padding:'9px',background:'#334155',border:'none',borderRadius:10,color:cacheRefreshing===t?'#94a3b8':'#60a5fa',fontSize:11,fontWeight:700,cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',gap:5,minWidth:90 }}>
@@ -742,3 +743,4 @@ function EmptyMsg({ text }) {
 function Skeletons(n) {
   return [...Array(n)].map((_,i) => <div key={i} className="shimmer" style={{ height:64,borderRadius:12,marginBottom:8,background:'#1e293b' }}/>)
 }
+
