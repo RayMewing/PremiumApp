@@ -743,4 +743,3 @@ function EmptyMsg({ text }) {
 function Skeletons(n) {
   return [...Array(n)].map((_,i) => <div key={i} className="shimmer" style={{ height:64,borderRadius:12,marginBottom:8,background:'#1e293b' }}/>)
 }
-
